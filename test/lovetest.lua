@@ -18,9 +18,8 @@ function lovetest.run()
   require "test/lunatest"
 
   for _, filename in ipairs(love.filesystem.enumerate('test')) do
-    local index, _ = string.find(filename,  "test_")
-    if index == 1 then
-      local testname, _ = filename:gsub(".lua", "")
+    if filename:match("^test_.*%.lua$") then
+      local testname = (filename:gsub(".lua", ""))
       lunatest.suite("test/" .. testname)
     end
   end
