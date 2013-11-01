@@ -55,6 +55,6 @@ end
 For more information on writing tests, read the Lunatest [documentation][doc]
 and [examples][exa].
 
-[doc]: 
-[exa]:
-[rel]: 
+[doc]: https://github.com/silentbicycle/lunatest
+[exa]: https://github.com/silentbicycle/lunatest/blob/master/test.lua
+[rel]: http://example.com
