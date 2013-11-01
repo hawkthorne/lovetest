@@ -4,7 +4,7 @@ Unit testing for LOVE games, powered by Lunatest.
 
 ## Features
 
-- Simple setup with zero depenedencies
+- Simple setup with zero dependencies
 - Run tests via the command line
 - Create tests quickly
 
