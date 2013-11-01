@@ -57,4 +57,4 @@ and [examples][exa].
 
 [doc]: https://github.com/silentbicycle/lunatest
 [exa]: https://github.com/silentbicycle/lunatest/blob/master/test.lua
-[rel]: http://example.com
+[rel]: https://github.com/hawkthorne/lovetest/releases/download/v0.1.0/lovetest-0.1.0.zip
