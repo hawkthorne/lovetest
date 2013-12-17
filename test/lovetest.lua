@@ -12,12 +12,20 @@ function lovetest.detect(args)
   return false
 end
 
+local function enumerate(dir)
+  if love.filesystem.enumerate then
+    return love.filesystem.enumerate(dir)
+  else
+    return love.filesystem.getDirectoryItems(dir)
+  end
+end
+
 -- Run the unit tests, On windows, don't quit. This allows the user to see the
 -- test results in the console
 function lovetest.run() 
   require "test/lunatest"
 
-  for _, filename in ipairs(love.filesystem.enumerate('test')) do
+  for _, filename in ipairs(enumerate('test')) do
     if filename:match("^test_.*%.lua$") then
       local testname = (filename:gsub(".lua", ""))
       lunatest.suite("test/" .. testname)
