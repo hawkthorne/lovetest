@@ -59,10 +59,15 @@ local random = random
 pcall(require, "debug")
 local debug = debug
 
+pcall(require, "socket")
+local socket = socket
+
+pcall(require, "posix")
+local posix = posix
+
 -- Use luasocket's gettime(), luaposix' gettimeofday(), or os.date for
 -- timestamps
-local now = pcall(require, "socket") and socket.gettime or
-            pcall(require, "posix") and posix.gettimeofday and
+local now = socket.gettime or posix.gettimeofday and
             function ()
                local s, us = posix.gettimeofday()
                return s + us / 1000000
